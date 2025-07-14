@@ -1,26 +1,59 @@
 <!--
-  templateType: none
+    templateType: none
 -->
 <!DOCTYPE html>
 <html lang="{{ html_lang }}" {{ html_lang_dir }}>
-  <head>
-    <meta charset="utf-8" />
-    {% if page_meta.html_title or pageTitle %}
-      <title>{{ page_meta.html_title or pageTitle }}</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ page_meta.meta_description }}" />
+
+    <title></title>
+    {% if page_meta.html_title or Airbnb %}
+      <title>{{ page_meta.html_title or Airbnb }}</title>
     {% endif %}
+
+    {{ require_css("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css") }}
+    {{ require_css("https://fonts.googleapis.com/css2?family=Circular:wght@300;400;500;600;700&display=swap") }}
+
+    {{ require_css ( get_asset_url("../../styles/main.css") )}}
+
     {% if brand_settings.primaryFavicon.src %}
       <link rel="shortcut icon" href="{{ brand_settings.primaryFavicon.src }}" />
     {% endif %}
-    <meta name="description" content="{{ page_meta.meta_description }}" />
-    {# To see a full list of what is included via standard_footer_includes please reference this article: https://developers.hubspot.com/docs/cms/hubl/variables#required-page-template-variables #}
+
+    {# Standard Includes #}
     {{ standard_header_includes }}
-  </head>
-  <body>
+</head>
+
+<body>
+
+    {# Scroll Progress #}
+    {% block scroll_progress %}
+        {% include '../partials/scroll-progress.hubl.html' %}
+    {% endblock scroll_progress %}
+
+    {# Header #}
+    {% block header %}
+        {% include '../partials/header.hubl.html' %}
+    {% endblock header%}
+
     <div class="body-wrapper {{ builtin_body_classes }}">
       {% block body %}
+        {# Content Renders Here #}
       {% endblock body %}
     </div>
-    {# To see a full list of what is included via standard_footer_includes please reference this article: https://developers.hubspot.com/docs/cms/hubl/variables#required-page-template-variables #}
+
+    {# Footer #}
+    {% block footer %}
+        {% include '../partials/footer.hubl.html' %}
+    {% endblock footer %}
+
+    {# Theme Js #}
+    {{ require_js(get_asset_url("../../js/main.js")) }}
+
+    {# Standard Includes #}
     {{ standard_footer_includes }}
-  </body>
+</body>
 </html>
