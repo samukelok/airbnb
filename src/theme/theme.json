@@ -1,0 +1,10 @@
+{
+  "name": "airbnb_enhanced",
+  "description": "An enhanced theme inspired by AirBnb's design principles, featuring a modern and clean aesthetic.",
+  "version": "1.0",
+  "label": "AirBnb Enhanced",
+  "author": {
+    "name": "Samukelo Khanya"
+  },
+  "screenshot_path": "./assets/img/theme.png"
+}

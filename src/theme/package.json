@@ -1,0 +1,18 @@
+{
+  "name": "airbnb-enhanced",
+  "version": "1.0.0",
+  "description": "A revamped version of the AirBnb theme with enhanced features and components.",
+  "scripts": {
+    "start": "hs-cms-dev-server .",
+    "deploy": "hs project upload"
+  },
+  "type": "module",
+  "keywords": [],
+  "dependencies": {
+    "@hubspot/cms-components": "latest",
+    "react": "^18"
+  },
+  "devDependencies": {
+    "@hubspot/cms-dev-server": "latest"
+  }
+}
