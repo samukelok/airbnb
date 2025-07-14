@@ -5,7 +5,7 @@ import {
   ImageField,
 } from '@hubspot/cms-components/fields';
 import { RichText } from '@hubspot/cms-components';
-import logo from '../../../assets/sprocket.svg';
+import logo from '../../../assets/img/logo.png';
 import styles from '../../../styles/getting-started.module.css';
 
 export function Component({ fieldValues, hublParameters }) {
@@ -54,7 +54,7 @@ export const fields = (
     <TextField
       name="headline"
       label="Headline"
-      default="Getting h CMS React"
+      default="Getting CMS React"
     />
     <RichTextField
       name="gettingStarted"
