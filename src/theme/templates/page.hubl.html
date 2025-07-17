@@ -7,14 +7,16 @@
 
 {% block body %}
 
-  {% module
-    "gettingStarted"
-    path="../components/modules/GettingStarted",
-    brandColors="{{ theme.brand_color }}",
-  %}
+    {# Include Banner Partial #}
+    {% include './partials/home/banner.hubl.html' %}
 
-  {# Test #}
+    {# Include Map Toggle Partial #}
+    {% include './partials/home/maptoggle.hubl.html' %}
 
-  
+    {# Include Home Listings #}
+    {% include './partials/home/listings.hubl.html' %}
+
+    {# Include Search Modal #}
+    {% include './partials/home/search.hubl.html' %}
 
 {% endblock body %}
