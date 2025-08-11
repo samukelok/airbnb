@@ -37,8 +37,8 @@
 
     {# Header #}
     {% block header %}
-        {% include '../partials/header.hubl.html' %}
-    {% endblock header%}
+        {% module 'Header' path='../../components/modules/Header', label='Header' %}
+    {% endblock header %}
 
     <div class="body-wrapper {{ builtin_body_classes }}">
       {% block body %}
@@ -48,7 +48,7 @@
 
     {# Footer #}
     {% block footer %}
-        {% include '../partials/footer.hubl.html' %}
+        {% module "Footer" path="../../components/modules/Footer", label="Footer" %}
     {% endblock footer %}
 
     {# Theme Js #}

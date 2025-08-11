@@ -8,7 +8,7 @@
 {% block body %}
 
     {# Include Banner Partial #}
-    {% include './partials/home/banner.hubl.html' %}
+    {% module "Banner" path="../components/modules/Banner", label="Banner" %}
 
     {# Include Map Toggle Partial #}
     {% include './partials/home/maptoggle.hubl.html' %}
