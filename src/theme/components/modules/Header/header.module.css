@@ -1,0 +1,53 @@
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--airbnb-white);
+    z-index: 1000;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+    height: 80px;
+}
+
+header.scrolled {
+    border-bottom: 1px solid var(--airbnb-light-gray);
+    box-shadow: var(--shadow-sm);
+    backdrop-filter: blur(20px);
+}
+
+.logo {
+    color: var(--airbnb-pink);
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo::before {
+    content: '';
+    width: 32px;
+    height: 32px;
+
+    background-size: contain;
+    transition: var(--transition);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}

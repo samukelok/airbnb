@@ -398,3 +398,17 @@ document.querySelectorAll('.listings-row').forEach(row => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuIcon = document.querySelector('.menu-icon');
+    const dropdown = document.getElementById('dropdownMenu');
+
+    menuIcon.addEventListener('click', function (e) {
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        e.stopPropagation();
+    });
+
+    document.addEventListener('click', function () {
+        dropdown.style.display = 'none';
+    });
+});
