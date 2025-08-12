@@ -5,7 +5,7 @@ import defaultLogo from "../../../assets/img/logo.png";
 export function Component({ fieldValues }) {
   return (
     <>
-    <div class={headerStyles["scroll-indicator"]} id="scrollIndicator"></div>
+    <div className={headerStyles["scroll-indicator"]} id="scrollIndicator"></div>
     
     <header id="mainHeader" className={headerStyles.header}>
       <div className={headerStyles.logo}>
